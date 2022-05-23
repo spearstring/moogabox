@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form2
+    partial class ManagerForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -51,15 +51,15 @@ namespace WindowsFormsApp1
 			this.Btn_Stock.Text = "재고관리";
 			this.Btn_Stock.UseVisualStyleBackColor = true;
 			// 
-			// Form2
+			// ManagerForm1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(584, 411);
 			this.Controls.Add(this.Btn_Stock);
 			this.Controls.Add(this.Btn_Sale);
-			this.Name = "Form2";
-			this.Text = "Form2";
+			this.Name = "ManagerForm1";
+			this.Text = "ManagerForm1";
 			this.Load += new System.EventHandler(this.Form2_Load);
 			this.ResumeLayout(false);
 

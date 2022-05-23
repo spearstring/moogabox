@@ -12,9 +12,9 @@ using moogabox;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class ManagerForm3 : Form
     {
-        public Form4()
+        public ManagerForm3()
         {
             InitializeComponent();
         }

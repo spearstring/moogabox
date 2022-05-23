@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,77 +29,77 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_Next = new System.Windows.Forms.Button();
-            this.Ticket_Number = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // Btn_Next
-            // 
-            this.Btn_Next.Location = new System.Drawing.Point(501, 333);
-            this.Btn_Next.Name = "Btn_Next";
-            this.Btn_Next.Size = new System.Drawing.Size(47, 24);
-            this.Btn_Next.TabIndex = 0;
-            this.Btn_Next.Text = "다음";
-            this.Btn_Next.UseVisualStyleBackColor = true;
-            this.Btn_Next.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Ticket_Number
-            // 
-            this.Ticket_Number.Location = new System.Drawing.Point(164, 191);
-            this.Ticket_Number.Name = "Ticket_Number";
-            this.Ticket_Number.Size = new System.Drawing.Size(323, 21);
-            this.Ticket_Number.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 17F);
-            this.label1.Location = new System.Drawing.Point(56, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "발권번호";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 20F);
-            this.label2.Location = new System.Drawing.Point(228, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 27);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "예매조회";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 15F);
-            this.label3.Location = new System.Drawing.Point(229, 261);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "로 조회합니다";
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 411);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Ticket_Number);
-            this.Controls.Add(this.Btn_Next);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.Btn_Next = new System.Windows.Forms.Button();
+			this.Ticket_Number = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.SuspendLayout();
+			// 
+			// Btn_Next
+			// 
+			this.Btn_Next.Location = new System.Drawing.Point(501, 333);
+			this.Btn_Next.Name = "Btn_Next";
+			this.Btn_Next.Size = new System.Drawing.Size(47, 24);
+			this.Btn_Next.TabIndex = 0;
+			this.Btn_Next.Text = "다음";
+			this.Btn_Next.UseVisualStyleBackColor = true;
+			this.Btn_Next.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// Ticket_Number
+			// 
+			this.Ticket_Number.Location = new System.Drawing.Point(164, 191);
+			this.Ticket_Number.Name = "Ticket_Number";
+			this.Ticket_Number.Size = new System.Drawing.Size(323, 21);
+			this.Ticket_Number.TabIndex = 1;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("굴림", 17F);
+			this.label1.Location = new System.Drawing.Point(56, 191);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(102, 23);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "발권번호";
+			this.label1.Click += new System.EventHandler(this.label1_Click);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("굴림", 20F);
+			this.label2.Location = new System.Drawing.Point(228, 99);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(120, 27);
+			this.label2.TabIndex = 3;
+			this.label2.Text = "예매조회";
+			this.label2.Click += new System.EventHandler(this.label2_Click);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("굴림", 15F);
+			this.label3.Location = new System.Drawing.Point(229, 261);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(136, 20);
+			this.label3.TabIndex = 4;
+			this.label3.Text = "로 조회합니다";
+			// 
+			// Form2
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(584, 411);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.Ticket_Number);
+			this.Controls.Add(this.Btn_Next);
+			this.Name = "Form2";
+			this.Text = "Form2";
+			this.Load += new System.EventHandler(this.Form1_Load);
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 

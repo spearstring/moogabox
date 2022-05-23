@@ -35,6 +35,9 @@ namespace moogabox
 			this.lbSitnum = new System.Windows.Forms.Label();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.tbMovie = new System.Windows.Forms.TextBox();
+			this.tbTime = new System.Windows.Forms.TextBox();
+			this.tbSeat = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -42,7 +45,7 @@ namespace moogabox
 			// 
 			this.lbTime.AutoSize = true;
 			this.lbTime.Font = new System.Drawing.Font("굴림", 20F);
-			this.lbTime.Location = new System.Drawing.Point(257, 245);
+			this.lbTime.Location = new System.Drawing.Point(124, 247);
 			this.lbTime.Name = "lbTime";
 			this.lbTime.Size = new System.Drawing.Size(66, 27);
 			this.lbTime.TabIndex = 7;
@@ -52,7 +55,7 @@ namespace moogabox
 			// 
 			this.lbTitle.AutoSize = true;
 			this.lbTitle.Font = new System.Drawing.Font("굴림", 20F);
-			this.lbTitle.Location = new System.Drawing.Point(257, 185);
+			this.lbTitle.Location = new System.Drawing.Point(124, 194);
 			this.lbTitle.Name = "lbTitle";
 			this.lbTitle.Size = new System.Drawing.Size(66, 27);
 			this.lbTitle.TabIndex = 6;
@@ -60,7 +63,7 @@ namespace moogabox
 			// 
 			// pbMovie
 			// 
-			this.pbMovie.Location = new System.Drawing.Point(319, 12);
+			this.pbMovie.Location = new System.Drawing.Point(246, 12);
 			this.pbMovie.Name = "pbMovie";
 			this.pbMovie.Size = new System.Drawing.Size(145, 159);
 			this.pbMovie.TabIndex = 5;
@@ -70,7 +73,7 @@ namespace moogabox
 			// 
 			this.lbSitnum.AutoSize = true;
 			this.lbSitnum.Font = new System.Drawing.Font("굴림", 20F);
-			this.lbSitnum.Location = new System.Drawing.Point(257, 306);
+			this.lbSitnum.Location = new System.Drawing.Point(124, 303);
 			this.lbSitnum.Name = "lbSitnum";
 			this.lbSitnum.Size = new System.Drawing.Size(66, 27);
 			this.lbSitnum.TabIndex = 8;
@@ -78,7 +81,7 @@ namespace moogabox
 			// 
 			// btnOK
 			// 
-			this.btnOK.Location = new System.Drawing.Point(262, 375);
+			this.btnOK.Location = new System.Drawing.Point(195, 375);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(104, 45);
 			this.btnOK.TabIndex = 9;
@@ -88,18 +91,42 @@ namespace moogabox
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(407, 375);
+			this.btnCancel.Location = new System.Drawing.Point(340, 375);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(104, 45);
 			this.btnCancel.TabIndex = 10;
 			this.btnCancel.Text = "취소";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
+			// tbMovie
+			// 
+			this.tbMovie.Location = new System.Drawing.Point(207, 200);
+			this.tbMovie.Name = "tbMovie";
+			this.tbMovie.Size = new System.Drawing.Size(237, 21);
+			this.tbMovie.TabIndex = 11;
+			// 
+			// tbTime
+			// 
+			this.tbTime.Location = new System.Drawing.Point(207, 253);
+			this.tbTime.Name = "tbTime";
+			this.tbTime.Size = new System.Drawing.Size(237, 21);
+			this.tbTime.TabIndex = 11;
+			// 
+			// tbSeat
+			// 
+			this.tbSeat.Location = new System.Drawing.Point(207, 309);
+			this.tbSeat.Name = "tbSeat";
+			this.tbSeat.Size = new System.Drawing.Size(237, 21);
+			this.tbSeat.TabIndex = 11;
+			// 
 			// Form6
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(652, 450);
+			this.Controls.Add(this.tbSeat);
+			this.Controls.Add(this.tbTime);
+			this.Controls.Add(this.tbMovie);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.lbSitnum);
@@ -123,5 +150,8 @@ namespace moogabox
         private System.Windows.Forms.Label lbSitnum;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-    }
+		private System.Windows.Forms.TextBox tbMovie;
+		private System.Windows.Forms.TextBox tbTime;
+		private System.Windows.Forms.TextBox tbSeat;
+	}
 }

@@ -13,7 +13,10 @@ namespace moogabox
 {
     public partial class Form6 : Form
     {
-        public Form6()
+		public string UserId { get; set; }
+
+		private string Constr = "Server=(local);database=MoogaBox;" + "Integrated Security=true"; //SQL 연결문자열
+		public Form6()
         {
             InitializeComponent();
         }
@@ -22,16 +25,29 @@ namespace moogabox
         {
             if (MessageBox.Show("매점 추가 구매 하시겠습니까?", "추가 구매", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-				Form9 form9 = new Form9()
-            }
+				// 현재까지의 예매정보 임시 테이블(TmpReservation)에 저장
 
-            else
+				// 매점 창으로 이동
+				Form9 form9 = new Form9();
+				form9.Show();
+				this.Hide();
+				
+			}
+
+			else
             {
-
-            }
+				Form7 form7 = new Form7();
+				form7.Show();
+				this.Hide();
+			}
         }
 
 		private void Form6_Load(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void DataLoad()
 		{
 
 		}

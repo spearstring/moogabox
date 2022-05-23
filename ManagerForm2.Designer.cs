@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form3
+    partial class ManagerForm2
     {
         /// <summary>
         /// Required designer variable.
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
 			this.View_TotalIncome.TabIndex = 8;
 			this.View_TotalIncome.UseCompatibleStateImageBehavior = false;
 			// 
-			// Form3
+			// ManagerForm2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,8 +93,8 @@ namespace WindowsFormsApp1
 			this.Controls.Add(this.Btn_Cancle);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Name = "Form3";
-			this.Text = "Form3";
+			this.Name = "ManagerForm2";
+			this.Text = "ManagerForm2";
 			this.Load += new System.EventHandler(this.Form3_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

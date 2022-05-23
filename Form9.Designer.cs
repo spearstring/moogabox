@@ -324,7 +324,7 @@ namespace WinFormsApp1
 			this.Controls.Add(this.label1);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Form9";
-			this.Text = "Form3";
+			this.Text = "Form9";
 			this.Load += new System.EventHandler(this.Form9_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form5
+    partial class ManagerForm4
     {
         /// <summary>
         /// Required designer variable.
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
 			this.Btn_Back.Text = "뒤로";
 			this.Btn_Back.UseVisualStyleBackColor = true;
 			// 
-			// Form5
+			// ManagerForm4
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,8 +114,8 @@ namespace WindowsFormsApp1
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.View_WearhouseStock);
 			this.Controls.Add(this.View_StoreStock);
-			this.Name = "Form5";
-			this.Text = "Form5";
+			this.Name = "ManagerForm4";
+			this.Text = "ManagerForm4";
 			this.Load += new System.EventHandler(this.Form5_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
