@@ -32,27 +32,27 @@ namespace WinFormsApp1
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnCheck = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.txtSumMovie = new System.Windows.Forms.TextBox();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.txtSumMajum = new System.Windows.Forms.TextBox();
-			this.txtSumTotal = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.btnBack = new System.Windows.Forms.Button();
 			this.lvMovie = new System.Windows.Forms.ListView();
-			this.listView2 = new System.Windows.Forms.ListView();
 			this.MvName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.StartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Hall = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SeatNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SumMovie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtSumMovie = new System.Windows.Forms.TextBox();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.lvMajum = new System.Windows.Forms.ListView();
 			this.SnackName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SnackNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Cout = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SumSnack = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtSumMajum = new System.Windows.Forms.TextBox();
+			this.txtSumTotal = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.btnBack = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
@@ -92,6 +92,49 @@ namespace WinFormsApp1
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "예매 결제정보";
 			// 
+			// lvMovie
+			// 
+			this.lvMovie.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MvName,
+            this.StartTime,
+            this.Hall,
+            this.SeatNum,
+            this.Count,
+            this.SumMovie});
+			this.lvMovie.FullRowSelect = true;
+			this.lvMovie.GridLines = true;
+			this.lvMovie.HideSelection = false;
+			this.lvMovie.Location = new System.Drawing.Point(6, 19);
+			this.lvMovie.Name = "lvMovie";
+			this.lvMovie.Size = new System.Drawing.Size(364, 86);
+			this.lvMovie.TabIndex = 10;
+			this.lvMovie.UseCompatibleStateImageBehavior = false;
+			this.lvMovie.View = System.Windows.Forms.View.Details;
+			// 
+			// MvName
+			// 
+			this.MvName.Text = "영화이름";
+			// 
+			// StartTime
+			// 
+			this.StartTime.Text = "시간";
+			// 
+			// Hall
+			// 
+			this.Hall.Text = "상영관";
+			// 
+			// SeatNum
+			// 
+			this.SeatNum.Text = "좌석";
+			// 
+			// Count
+			// 
+			this.Count.Text = "수량";
+			// 
+			// SumMovie
+			// 
+			this.SumMovie.Text = "합계";
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -111,7 +154,7 @@ namespace WinFormsApp1
 			// 
 			// groupBox2
 			// 
-			this.groupBox2.Controls.Add(this.listView2);
+			this.groupBox2.Controls.Add(this.lvMajum);
 			this.groupBox2.Controls.Add(this.label3);
 			this.groupBox2.Controls.Add(this.txtSumMajum);
 			this.groupBox2.Location = new System.Drawing.Point(12, 172);
@@ -122,6 +165,44 @@ namespace WinFormsApp1
 			this.groupBox2.TabIndex = 8;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "매점 결제정보";
+			// 
+			// lvMajum
+			// 
+			this.lvMajum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.SnackName,
+            this.SnackNum,
+            this.Price,
+            this.Cout,
+            this.SumSnack});
+			this.lvMajum.FullRowSelect = true;
+			this.lvMajum.GridLines = true;
+			this.lvMajum.HideSelection = false;
+			this.lvMajum.Location = new System.Drawing.Point(6, 19);
+			this.lvMajum.Name = "lvMajum";
+			this.lvMajum.Size = new System.Drawing.Size(364, 120);
+			this.lvMajum.TabIndex = 11;
+			this.lvMajum.UseCompatibleStateImageBehavior = false;
+			this.lvMajum.View = System.Windows.Forms.View.Details;
+			// 
+			// SnackName
+			// 
+			this.SnackName.Text = "상품명";
+			// 
+			// SnackNum
+			// 
+			this.SnackNum.Text = "상품번호";
+			// 
+			// Price
+			// 
+			this.Price.Text = "단가";
+			// 
+			// Cout
+			// 
+			this.Cout.Text = "수량";
+			// 
+			// SumSnack
+			// 
+			this.SumSnack.Text = "합계";
 			// 
 			// label3
 			// 
@@ -168,87 +249,6 @@ namespace WinFormsApp1
 			this.btnBack.UseVisualStyleBackColor = true;
 			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
 			// 
-			// lvMovie
-			// 
-			this.lvMovie.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.MvName,
-            this.StartTime,
-            this.Hall,
-            this.SeatNum,
-            this.Count,
-            this.SumMovie});
-			this.lvMovie.FullRowSelect = true;
-			this.lvMovie.GridLines = true;
-			this.lvMovie.HideSelection = false;
-			this.lvMovie.Location = new System.Drawing.Point(6, 19);
-			this.lvMovie.Name = "lvMovie";
-			this.lvMovie.Size = new System.Drawing.Size(364, 86);
-			this.lvMovie.TabIndex = 10;
-			this.lvMovie.UseCompatibleStateImageBehavior = false;
-			this.lvMovie.View = System.Windows.Forms.View.Details;
-			// 
-			// listView2
-			// 
-			this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.SnackName,
-            this.SnackNum,
-            this.Price,
-            this.Cout,
-            this.SumSnack});
-			this.listView2.FullRowSelect = true;
-			this.listView2.GridLines = true;
-			this.listView2.HideSelection = false;
-			this.listView2.Location = new System.Drawing.Point(6, 19);
-			this.listView2.Name = "listView2";
-			this.listView2.Size = new System.Drawing.Size(364, 120);
-			this.listView2.TabIndex = 11;
-			this.listView2.UseCompatibleStateImageBehavior = false;
-			this.listView2.View = System.Windows.Forms.View.Details;
-			// 
-			// MvName
-			// 
-			this.MvName.Text = "영화이름";
-			// 
-			// StartTime
-			// 
-			this.StartTime.Text = "시간";
-			// 
-			// Hall
-			// 
-			this.Hall.Text = "상영관";
-			// 
-			// SeatNum
-			// 
-			this.SeatNum.Text = "좌석";
-			// 
-			// Count
-			// 
-			this.Count.Text = "수량";
-			// 
-			// SumMovie
-			// 
-			this.SumMovie.Text = "합계";
-			// 
-			// SnackName
-			// 
-			this.SnackName.Text = "상품명";
-			// 
-			// SnackNum
-			// 
-			this.SnackNum.Text = "상품번호";
-			// 
-			// Price
-			// 
-			this.Price.Text = "단가";
-			// 
-			// Cout
-			// 
-			this.Cout.Text = "수량";
-			// 
-			// SumSnack
-			// 
-			this.SumSnack.Text = "합계";
-			// 
 			// Form7
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -294,7 +294,7 @@ namespace WinFormsApp1
 		private System.Windows.Forms.ColumnHeader SeatNum;
 		private System.Windows.Forms.ColumnHeader Count;
 		private System.Windows.Forms.ColumnHeader SumMovie;
-		private System.Windows.Forms.ListView listView2;
+		private System.Windows.Forms.ListView lvMajum;
 		private System.Windows.Forms.ColumnHeader SnackName;
 		private System.Windows.Forms.ColumnHeader SnackNum;
 		private System.Windows.Forms.ColumnHeader Price;
