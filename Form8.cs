@@ -24,5 +24,10 @@ namespace WinFormsApp1
 			form1.Show();
 			this.Hide();
 		}
+
+		private void Form8_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

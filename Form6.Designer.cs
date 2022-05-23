@@ -97,9 +97,11 @@ namespace moogabox
 			this.btnCancel.TabIndex = 10;
 			this.btnCancel.Text = "취소";
 			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// tbMovie
 			// 
+			this.tbMovie.CausesValidation = false;
 			this.tbMovie.Location = new System.Drawing.Point(207, 200);
 			this.tbMovie.Name = "tbMovie";
 			this.tbMovie.Size = new System.Drawing.Size(237, 21);
@@ -107,6 +109,7 @@ namespace moogabox
 			// 
 			// tbTime
 			// 
+			this.tbTime.CausesValidation = false;
 			this.tbTime.Location = new System.Drawing.Point(207, 253);
 			this.tbTime.Name = "tbTime";
 			this.tbTime.Size = new System.Drawing.Size(237, 21);
@@ -114,6 +117,7 @@ namespace moogabox
 			// 
 			// tbSeat
 			// 
+			this.tbSeat.CausesValidation = false;
 			this.tbSeat.Location = new System.Drawing.Point(207, 309);
 			this.tbSeat.Name = "tbSeat";
 			this.tbSeat.Size = new System.Drawing.Size(237, 21);

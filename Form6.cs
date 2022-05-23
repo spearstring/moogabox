@@ -25,7 +25,7 @@ namespace moogabox
         {
             if (MessageBox.Show("매점 추가 구매 하시겠습니까?", "추가 구매", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-				// 현재까지의 예매정보 임시 테이블(TmpReservation)에 저장
+				
 
 				// 매점 창으로 이동
 				Form9 form9 = new Form9();
@@ -44,12 +44,19 @@ namespace moogabox
 
 		private void Form6_Load(object sender, EventArgs e)
 		{
-			
+			DataLoad();
 		}
 
 		private void DataLoad()
 		{
 
+		}
+
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+			Form5 form5 = new Form5();
+			form5.Show();
+			this.Hide();
 		}
 	}
 }
