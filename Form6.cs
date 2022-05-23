@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using WinFormsApp1;
 
 namespace moogabox
@@ -49,7 +50,8 @@ namespace moogabox
 
 		private void DataLoad()
 		{
-
+			var Conn = new SqlConnection(Constr);
+			Conn.Open();
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
