@@ -29,38 +29,39 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_StoreStock = new System.Windows.Forms.Button();
-            this.Btn_WarehouseStock = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // Btn_StoreStock
-            // 
-            this.Btn_StoreStock.Location = new System.Drawing.Point(72, 131);
-            this.Btn_StoreStock.Name = "Btn_StoreStock";
-            this.Btn_StoreStock.Size = new System.Drawing.Size(165, 149);
-            this.Btn_StoreStock.TabIndex = 0;
-            this.Btn_StoreStock.Text = "매장 재고";
-            this.Btn_StoreStock.UseVisualStyleBackColor = true;
-            // 
-            // Btn_WarehouseStock
-            // 
-            this.Btn_WarehouseStock.Location = new System.Drawing.Point(328, 131);
-            this.Btn_WarehouseStock.Name = "Btn_WarehouseStock";
-            this.Btn_WarehouseStock.Size = new System.Drawing.Size(165, 149);
-            this.Btn_WarehouseStock.TabIndex = 1;
-            this.Btn_WarehouseStock.Text = "창고 재고";
-            this.Btn_WarehouseStock.UseVisualStyleBackColor = true;
-            // 
-            // Form4
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 411);
-            this.Controls.Add(this.Btn_WarehouseStock);
-            this.Controls.Add(this.Btn_StoreStock);
-            this.Name = "Form4";
-            this.Text = "Form4";
-            this.ResumeLayout(false);
+			this.Btn_StoreStock = new System.Windows.Forms.Button();
+			this.Btn_WarehouseStock = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// Btn_StoreStock
+			// 
+			this.Btn_StoreStock.Location = new System.Drawing.Point(72, 131);
+			this.Btn_StoreStock.Name = "Btn_StoreStock";
+			this.Btn_StoreStock.Size = new System.Drawing.Size(165, 149);
+			this.Btn_StoreStock.TabIndex = 0;
+			this.Btn_StoreStock.Text = "매장 재고";
+			this.Btn_StoreStock.UseVisualStyleBackColor = true;
+			// 
+			// Btn_WarehouseStock
+			// 
+			this.Btn_WarehouseStock.Location = new System.Drawing.Point(328, 131);
+			this.Btn_WarehouseStock.Name = "Btn_WarehouseStock";
+			this.Btn_WarehouseStock.Size = new System.Drawing.Size(165, 149);
+			this.Btn_WarehouseStock.TabIndex = 1;
+			this.Btn_WarehouseStock.Text = "창고 재고";
+			this.Btn_WarehouseStock.UseVisualStyleBackColor = true;
+			// 
+			// Form4
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(584, 411);
+			this.Controls.Add(this.Btn_WarehouseStock);
+			this.Controls.Add(this.Btn_StoreStock);
+			this.Name = "Form4";
+			this.Text = "Form4";
+			this.Load += new System.EventHandler(this.Form4_Load);
+			this.ResumeLayout(false);
 
         }
 

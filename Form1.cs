@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 namespace moogabox
 {
@@ -16,5 +17,10 @@ namespace moogabox
         {
             InitializeComponent();
         }
-    }
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

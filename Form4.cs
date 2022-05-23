@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1;
+
 
 namespace moogabox
 {
@@ -121,5 +123,10 @@ namespace moogabox
         {
             groupBox1.Visible = true;
         }
-    }
+
+		private void Form4_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
