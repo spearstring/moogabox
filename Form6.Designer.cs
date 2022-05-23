@@ -35,9 +35,11 @@ namespace moogabox
 			this.lbSitnum = new System.Windows.Forms.Label();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
-			this.tbMovie = new System.Windows.Forms.TextBox();
-			this.tbTime = new System.Windows.Forms.TextBox();
-			this.tbSeat = new System.Windows.Forms.TextBox();
+			this.txtMovie = new System.Windows.Forms.TextBox();
+			this.txtTime = new System.Windows.Forms.TextBox();
+			this.txtHallNum = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtSeatNum = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -45,7 +47,7 @@ namespace moogabox
 			// 
 			this.lbTime.AutoSize = true;
 			this.lbTime.Font = new System.Drawing.Font("굴림", 20F);
-			this.lbTime.Location = new System.Drawing.Point(124, 247);
+			this.lbTime.Location = new System.Drawing.Point(124, 231);
 			this.lbTime.Name = "lbTime";
 			this.lbTime.Size = new System.Drawing.Size(66, 27);
 			this.lbTime.TabIndex = 7;
@@ -73,11 +75,11 @@ namespace moogabox
 			// 
 			this.lbSitnum.AutoSize = true;
 			this.lbSitnum.Font = new System.Drawing.Font("굴림", 20F);
-			this.lbSitnum.Location = new System.Drawing.Point(124, 303);
+			this.lbSitnum.Location = new System.Drawing.Point(97, 269);
 			this.lbSitnum.Name = "lbSitnum";
-			this.lbSitnum.Size = new System.Drawing.Size(66, 27);
+			this.lbSitnum.Size = new System.Drawing.Size(93, 27);
 			this.lbSitnum.TabIndex = 8;
-			this.lbSitnum.Text = "좌석";
+			this.lbSitnum.Text = "상영관";
 			// 
 			// btnOK
 			// 
@@ -99,40 +101,60 @@ namespace moogabox
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
-			// tbMovie
+			// txtMovie
 			// 
-			this.tbMovie.CausesValidation = false;
-			this.tbMovie.Location = new System.Drawing.Point(207, 200);
-			this.tbMovie.Name = "tbMovie";
-			this.tbMovie.Size = new System.Drawing.Size(237, 21);
-			this.tbMovie.TabIndex = 11;
+			this.txtMovie.CausesValidation = false;
+			this.txtMovie.Location = new System.Drawing.Point(207, 200);
+			this.txtMovie.Name = "txtMovie";
+			this.txtMovie.Size = new System.Drawing.Size(237, 21);
+			this.txtMovie.TabIndex = 11;
 			// 
-			// tbTime
+			// txtTime
 			// 
-			this.tbTime.CausesValidation = false;
-			this.tbTime.Location = new System.Drawing.Point(207, 253);
-			this.tbTime.Name = "tbTime";
-			this.tbTime.Size = new System.Drawing.Size(237, 21);
-			this.tbTime.TabIndex = 11;
+			this.txtTime.CausesValidation = false;
+			this.txtTime.Location = new System.Drawing.Point(207, 237);
+			this.txtTime.Name = "txtTime";
+			this.txtTime.Size = new System.Drawing.Size(237, 21);
+			this.txtTime.TabIndex = 11;
 			// 
-			// tbSeat
+			// txtHallNum
 			// 
-			this.tbSeat.CausesValidation = false;
-			this.tbSeat.Location = new System.Drawing.Point(207, 309);
-			this.tbSeat.Name = "tbSeat";
-			this.tbSeat.Size = new System.Drawing.Size(237, 21);
-			this.tbSeat.TabIndex = 11;
+			this.txtHallNum.CausesValidation = false;
+			this.txtHallNum.Location = new System.Drawing.Point(207, 275);
+			this.txtHallNum.Name = "txtHallNum";
+			this.txtHallNum.Size = new System.Drawing.Size(237, 21);
+			this.txtHallNum.TabIndex = 11;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("굴림", 20F);
+			this.label1.Location = new System.Drawing.Point(124, 306);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(66, 27);
+			this.label1.TabIndex = 8;
+			this.label1.Text = "좌석";
+			// 
+			// txtSeatNum
+			// 
+			this.txtSeatNum.CausesValidation = false;
+			this.txtSeatNum.Location = new System.Drawing.Point(207, 312);
+			this.txtSeatNum.Name = "txtSeatNum";
+			this.txtSeatNum.Size = new System.Drawing.Size(237, 21);
+			this.txtSeatNum.TabIndex = 11;
 			// 
 			// Form6
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(652, 450);
-			this.Controls.Add(this.tbSeat);
-			this.Controls.Add(this.tbTime);
-			this.Controls.Add(this.tbMovie);
+			this.Controls.Add(this.txtSeatNum);
+			this.Controls.Add(this.txtHallNum);
+			this.Controls.Add(this.txtTime);
+			this.Controls.Add(this.txtMovie);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOK);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.lbSitnum);
 			this.Controls.Add(this.lbTime);
 			this.Controls.Add(this.lbTitle);
@@ -154,8 +176,10 @@ namespace moogabox
         private System.Windows.Forms.Label lbSitnum;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-		private System.Windows.Forms.TextBox tbMovie;
-		private System.Windows.Forms.TextBox tbTime;
-		private System.Windows.Forms.TextBox tbSeat;
+		private System.Windows.Forms.TextBox txtMovie;
+		private System.Windows.Forms.TextBox txtTime;
+		private System.Windows.Forms.TextBox txtHallNum;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox txtSeatNum;
 	}
 }

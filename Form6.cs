@@ -14,8 +14,6 @@ namespace moogabox
 {
     public partial class Form6 : Form
     {
-		public string UserId { get; set; }
-
 		private string Constr = "Server=(local);database=MoogaBox;" + "Integrated Security=true"; //SQL 연결문자열
 		public Form6()
         {
@@ -52,6 +50,19 @@ namespace moogabox
 		{
 			var Conn = new SqlConnection(Constr);
 			Conn.Open();
+
+			var Comm = new SqlCommand("Select MvName, StartTime, Hall, SeatNum from TmpReservation", Conn);
+			var myRead = Comm.ExecuteReader();
+			if (myRead.Read())
+			{
+				this.txtMovie.Text = myRead[0].ToString();
+				this.txtTime.Text = myRead[1].ToString();
+				this.txtHallNum.Text = myRead[2].ToString();
+				this.txtSeatNum.Text = myRead[3].ToString();
+			}
+			myRead.Close();
+
+			Conn.Close();
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
@@ -62,3 +73,4 @@ namespace moogabox
 		}
 	}
 }
+
