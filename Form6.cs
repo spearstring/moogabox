@@ -21,12 +21,18 @@ namespace moogabox
         {
             if (MessageBox.Show("매점 추가 구매 하시겠습니까?", "추가 구매", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
+				Form9 
             }
+
             else
             {
 
             }
         }
-    }
+
+		private void Form6_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
