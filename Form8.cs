@@ -18,9 +18,11 @@ namespace WinFormsApp1
 			InitializeComponent();
 		}
 
-		private void Form2_Load(object sender, EventArgs e)
+		private void btnBack_Click(object sender, EventArgs e)
 		{
-
+			Form1 form1 = new Form1();
+			form1.Show();
+			this.Hide();
 		}
 	}
 }

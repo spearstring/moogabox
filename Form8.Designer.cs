@@ -44,8 +44,8 @@ namespace WinFormsApp1
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label1.Location = new System.Drawing.Point(159, 35);
+			this.label1.Font = new System.Drawing.Font("맑은 고딕", 15F);
+			this.label1.Location = new System.Drawing.Point(159, 28);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(92, 28);
 			this.label1.TabIndex = 0;
@@ -54,8 +54,8 @@ namespace WinFormsApp1
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label2.Location = new System.Drawing.Point(26, 103);
+			this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F);
+			this.label2.Location = new System.Drawing.Point(26, 82);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(84, 21);
 			this.label2.TabIndex = 1;
@@ -63,16 +63,17 @@ namespace WinFormsApp1
 			// 
 			// txtInfo
 			// 
-			this.txtInfo.Location = new System.Drawing.Point(116, 103);
+			this.txtInfo.Location = new System.Drawing.Point(116, 82);
+			this.txtInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtInfo.Name = "txtInfo";
-			this.txtInfo.Size = new System.Drawing.Size(237, 23);
+			this.txtInfo.Size = new System.Drawing.Size(237, 21);
 			this.txtInfo.TabIndex = 2;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label3.Location = new System.Drawing.Point(58, 160);
+			this.label3.Font = new System.Drawing.Font("맑은 고딕", 12F);
+			this.label3.Location = new System.Drawing.Point(58, 128);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(52, 21);
 			this.label3.TabIndex = 3;
@@ -81,8 +82,8 @@ namespace WinFormsApp1
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label4.Location = new System.Drawing.Point(58, 220);
+			this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F);
+			this.label4.Location = new System.Drawing.Point(58, 176);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(52, 21);
 			this.label4.TabIndex = 3;
@@ -91,8 +92,8 @@ namespace WinFormsApp1
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.label5.Location = new System.Drawing.Point(26, 278);
+			this.label5.Font = new System.Drawing.Font("맑은 고딕", 12F);
+			this.label5.Location = new System.Drawing.Point(26, 222);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(84, 21);
 			this.label5.TabIndex = 3;
@@ -100,39 +101,44 @@ namespace WinFormsApp1
 			// 
 			// txtTime
 			// 
-			this.txtTime.Location = new System.Drawing.Point(116, 162);
+			this.txtTime.Location = new System.Drawing.Point(116, 130);
+			this.txtTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtTime.Name = "txtTime";
-			this.txtTime.Size = new System.Drawing.Size(100, 23);
+			this.txtTime.Size = new System.Drawing.Size(100, 21);
 			this.txtTime.TabIndex = 4;
 			// 
 			// txtSeat
 			// 
-			this.txtSeat.Location = new System.Drawing.Point(116, 221);
+			this.txtSeat.Location = new System.Drawing.Point(116, 177);
+			this.txtSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtSeat.Name = "txtSeat";
-			this.txtSeat.Size = new System.Drawing.Size(100, 23);
+			this.txtSeat.Size = new System.Drawing.Size(100, 21);
 			this.txtSeat.TabIndex = 5;
 			// 
 			// txtNum
 			// 
-			this.txtNum.Location = new System.Drawing.Point(116, 279);
+			this.txtNum.Location = new System.Drawing.Point(116, 223);
+			this.txtNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtNum.Name = "txtNum";
-			this.txtNum.Size = new System.Drawing.Size(135, 23);
+			this.txtNum.Size = new System.Drawing.Size(135, 21);
 			this.txtNum.TabIndex = 6;
 			// 
 			// btnBack
 			// 
-			this.btnBack.Location = new System.Drawing.Point(301, 322);
+			this.btnBack.Location = new System.Drawing.Point(301, 258);
+			this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(91, 34);
+			this.btnBack.Size = new System.Drawing.Size(91, 27);
 			this.btnBack.TabIndex = 7;
 			this.btnBack.Text = "처음으로";
 			this.btnBack.UseVisualStyleBackColor = true;
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
 			// 
 			// Form8
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(416, 368);
+			this.ClientSize = new System.Drawing.Size(416, 294);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.txtNum);
 			this.Controls.Add(this.txtSeat);
@@ -143,9 +149,9 @@ namespace WinFormsApp1
 			this.Controls.Add(this.txtInfo);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Form8";
 			this.Text = "Form8";
-			this.Load += new System.EventHandler(this.Form2_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

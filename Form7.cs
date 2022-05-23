@@ -33,8 +33,8 @@ namespace WinFormsApp1
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
-			Form8 form8 = new Form8();
-			form8.Show();
+			Form1 form1 = new Form1();
+			form1.Show();
 			this.Hide();
 		}
 	}
