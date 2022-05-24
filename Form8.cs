@@ -12,9 +12,10 @@ using moogabox;
 
 namespace WinFormsApp1
 {
+
 	public partial class Form8 : Form
 	{
-		private string Constr = "Server=(local);database=MoogaBox;" + "Integrated Security=true"; //SQL 연결문자열
+		private string Constr = "Server = 210.119.12.69; Uid=User1;Pwd=1234;database=MoogaBox;" + "Integrated Security = false"; //SQL 연결문자열
 
 		public Form8()
 		{
@@ -23,6 +24,14 @@ namespace WinFormsApp1
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
+			var Conn = new SqlConnection(Constr);
+			Conn.Open();
+
+			var Comm = new SqlCommand("delete from TmpReservation", Conn);
+			Comm.ExecuteNonQuery();
+
+			Conn.Close();
+
 			Form1 form1 = new Form1();
 			form1.Show();
 			this.Hide();
@@ -54,6 +63,11 @@ namespace WinFormsApp1
 			myRead.Close();
 
 			Conn.Close();
+		}
+
+		private void Form8_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

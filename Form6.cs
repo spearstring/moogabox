@@ -14,7 +14,7 @@ namespace moogabox
 {
     public partial class Form6 : Form
     {
-		private string Constr = "Server=(local);database=MoogaBox;" + "Integrated Security=true"; //SQL 연결문자열
+		private string Constr = "Server = 210.119.12.69; Uid=User1;Pwd=1234;database=MoogaBox;" + "Integrated Security = false"; //SQL 연결문자열
 		public Form6()
         {
             InitializeComponent();
@@ -24,13 +24,10 @@ namespace moogabox
         {
             if (MessageBox.Show("매점 추가 구매 하시겠습니까?", "추가 구매", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-				
-
 				// 매점 창으로 이동
 				Form9 form9 = new Form9();
 				form9.Show();
 				this.Hide();
-				
 			}
 
 			else
@@ -67,9 +64,21 @@ namespace moogabox
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
+			var Conn = new SqlConnection(Constr);
+			Conn.Open();
+
+			var Comm = new SqlCommand("update TmpReservation set SeatNum = null", Conn);
+			Comm.ExecuteNonQuery();
+
+			Conn.Close();
 			Form5 form5 = new Form5();
 			form5.Show();
 			this.Hide();
+		}
+
+		private void Form6_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

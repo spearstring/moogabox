@@ -114,6 +114,7 @@ namespace WinFormsApp1
 			// MvName
 			// 
 			this.MvName.Text = "영화이름";
+			this.MvName.Width = 92;
 			// 
 			// StartTime
 			// 
@@ -122,10 +123,12 @@ namespace WinFormsApp1
 			// Hall
 			// 
 			this.Hall.Text = "상영관";
+			this.Hall.Width = 50;
 			// 
 			// SeatNum
 			// 
 			this.SeatNum.Text = "좌석";
+			this.SeatNum.Width = 46;
 			// 
 			// Count
 			// 
@@ -187,6 +190,7 @@ namespace WinFormsApp1
 			// SnackName
 			// 
 			this.SnackName.Text = "상품명";
+			this.SnackName.Width = 120;
 			// 
 			// SnackNum
 			// 
@@ -195,10 +199,12 @@ namespace WinFormsApp1
 			// Price
 			// 
 			this.Price.Text = "단가";
+			this.Price.Width = 61;
 			// 
 			// Cout
 			// 
 			this.Cout.Text = "수량";
+			this.Cout.Width = 57;
 			// 
 			// SumSnack
 			// 
@@ -264,6 +270,7 @@ namespace WinFormsApp1
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Form7";
 			this.Text = "Form7";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form7_FormClosed);
 			this.Load += new System.EventHandler(this.Form7_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

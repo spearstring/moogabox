@@ -161,6 +161,7 @@ namespace moogabox
 			this.Controls.Add(this.pbMovie);
 			this.Name = "Form6";
 			this.Text = "Form6";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form6_FormClosed);
 			this.Load += new System.EventHandler(this.Form6_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
 			this.ResumeLayout(false);

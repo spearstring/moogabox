@@ -15,7 +15,7 @@ namespace WinFormsApp1
 	// 예매임시테이블 과 매점구매 테이블을 불러와 각각의 그룹에 뿌린다.
 	public partial class Form7 : Form
 	{
-		private string Constr = "Server=(local);database=MoogaBox;" + "Integrated Security=true"; //SQL 연결문자열
+		private string Constr = "Server=210.119.12.69; Uid=User1;Pwd=1234;database=MoogaBox;" + "Integrated Security=false"; //SQL 연결문자열
 
 		public Form7()
 		{
@@ -103,9 +103,22 @@ namespace WinFormsApp1
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
+			var Conn = new SqlConnection(Constr);
+			Conn.Open();
+
+			var Comm = new SqlCommand("delete from TmpReservation", Conn);
+			Comm.ExecuteNonQuery();
+
+			Conn.Close();
+
 			Form1 form1 = new Form1();
 			form1.Show();
 			this.Hide();
+		}
+
+		private void Form7_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }
