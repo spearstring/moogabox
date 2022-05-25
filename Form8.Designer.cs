@@ -99,7 +99,7 @@ namespace WinFormsApp1
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(84, 21);
 			this.label5.TabIndex = 3;
-			this.label5.Text = "발권번호 :";
+			this.label5.Text = "예매번호 :";
 			// 
 			// txtTime
 			// 
@@ -175,7 +175,7 @@ namespace WinFormsApp1
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Form8";
 			this.Text = "Form8";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form8_FormClosed);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form8_FormClosing);
 			this.Load += new System.EventHandler(this.Form8_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

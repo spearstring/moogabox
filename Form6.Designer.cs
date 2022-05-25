@@ -31,7 +31,6 @@ namespace moogabox
         {
 			this.lbTime = new System.Windows.Forms.Label();
 			this.lbTitle = new System.Windows.Forms.Label();
-			this.pbMovie = new System.Windows.Forms.PictureBox();
 			this.lbSitnum = new System.Windows.Forms.Label();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@ namespace moogabox
 			this.txtHallNum = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtSeatNum = new System.Windows.Forms.TextBox();
+			this.pbMovie = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -62,14 +62,6 @@ namespace moogabox
 			this.lbTitle.Size = new System.Drawing.Size(66, 27);
 			this.lbTitle.TabIndex = 6;
 			this.lbTitle.Text = "영화";
-			// 
-			// pbMovie
-			// 
-			this.pbMovie.Location = new System.Drawing.Point(246, 12);
-			this.pbMovie.Name = "pbMovie";
-			this.pbMovie.Size = new System.Drawing.Size(145, 159);
-			this.pbMovie.TabIndex = 5;
-			this.pbMovie.TabStop = false;
 			// 
 			// lbSitnum
 			// 
@@ -143,6 +135,15 @@ namespace moogabox
 			this.txtSeatNum.Size = new System.Drawing.Size(237, 21);
 			this.txtSeatNum.TabIndex = 11;
 			// 
+			// pbMovie
+			// 
+			this.pbMovie.Location = new System.Drawing.Point(246, 12);
+			this.pbMovie.Name = "pbMovie";
+			this.pbMovie.Size = new System.Drawing.Size(145, 159);
+			this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbMovie.TabIndex = 5;
+			this.pbMovie.TabStop = false;
+			// 
 			// Form6
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -161,7 +162,7 @@ namespace moogabox
 			this.Controls.Add(this.pbMovie);
 			this.Name = "Form6";
 			this.Text = "Form6";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form6_FormClosed);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form6_FormClosing);
 			this.Load += new System.EventHandler(this.Form6_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
 			this.ResumeLayout(false);
@@ -173,7 +174,6 @@ namespace moogabox
 
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Label lbSitnum;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
@@ -182,5 +182,6 @@ namespace moogabox
 		private System.Windows.Forms.TextBox txtHallNum;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtSeatNum;
+		private System.Windows.Forms.PictureBox pbMovie;
 	}
 }

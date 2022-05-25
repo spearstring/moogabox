@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 using moogabox;
 
 namespace WinFormsApp1
@@ -15,8 +16,8 @@ namespace WinFormsApp1
 
 	public partial class Form8 : Form
 	{
-		private string Constr = "Server = 210.119.12.69; Uid=User1;Pwd=1234;database=MoogaBox;" + "Integrated Security = false"; //SQL 연결문자열
-
+		string Constr = ConfigurationManager.ConnectionStrings["Test"].ConnectionString;
+		
 		public Form8()
 		{
 			InitializeComponent();
@@ -49,8 +50,11 @@ namespace WinFormsApp1
 			Conn.Open();
 			string InsertSql = string.Format("insert into Reservation select * from TmpReservation");
 			var Com = new SqlCommand(InsertSql, Conn);
-			var Comm = new SqlCommand("Select MvName, StartTime, Hall, SeatNum from TmpReservation", Conn);
 			Com.ExecuteNonQuery();
+			//InsertSql = "update Reservation set RsvCode = " + DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "0001 " + "where ID = "
+
+			var Comm = new SqlCommand("Select MvName, StartTime, Hall, SeatNum, RsvCode from Reservation", Conn);
+			
 			var myRead = Comm.ExecuteReader();
 			if (myRead.Read())
 			{
@@ -58,14 +62,14 @@ namespace WinFormsApp1
 				this.txtTime.Text = myRead[1].ToString();
 				this.txtHallNum.Text = myRead[2].ToString();
 				this.txtSeatNum.Text = myRead[3].ToString();
-				this.txtNum.Text = "temp";
+				this.txtNum.Text = myRead[4].ToString();
 			}
 			myRead.Close();
 
 			Conn.Close();
 		}
 
-		private void Form8_FormClosed(object sender, FormClosedEventArgs e)
+		private void Form8_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}

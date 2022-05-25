@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using WinFormsApp1;
+using System.Configuration;
 
 namespace moogabox
 {
     public partial class Form6 : Form
     {
-		private string Constr = "Server = 210.119.12.69; Uid=User1;Pwd=1234;database=MoogaBox;" + "Integrated Security = false"; //SQL 연결문자열
+		string Constr = ConfigurationManager.ConnectionStrings["Test"].ConnectionString;
+
 		public Form6()
         {
             InitializeComponent();
@@ -40,10 +42,13 @@ namespace moogabox
 
 		private void Form6_Load(object sender, EventArgs e)
 		{
-			DataLoad();
+			string path = "../../Resource/" + DataLoad() + ".jpg";
+			Image img = Image.FromFile(path);
+			pbMovie.Load(path);
+			pbMovie.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
-		private void DataLoad()
+		private string DataLoad()
 		{
 			var Conn = new SqlConnection(Constr);
 			Conn.Open();
@@ -57,6 +62,9 @@ namespace moogabox
 				this.txtHallNum.Text = myRead[2].ToString();
 				this.txtSeatNum.Text = myRead[3].ToString();
 			}
+
+			return this.txtMovie.Text;
+
 			myRead.Close();
 
 			Conn.Close();
@@ -76,7 +84,7 @@ namespace moogabox
 			this.Hide();
 		}
 
-		private void Form6_FormClosed(object sender, FormClosedEventArgs e)
+		private void Form6_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			Application.Exit();
 		}

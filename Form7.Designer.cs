@@ -270,7 +270,7 @@ namespace WinFormsApp1
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Form7";
 			this.Text = "Form7";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form7_FormClosed);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form7_FormClosing);
 			this.Load += new System.EventHandler(this.Form7_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
