@@ -10,7 +10,7 @@ namespace moogabox
     {
         // 메뉴 한 개당 곱해야할 가격 종류
         private int won2500 = 2500, won3000 = 3000, won4000 = 4000, won5000 = 5000, won6000 = 6000, won9000 = 9000, 
-            won12000 = 12000, won14000, won6500;
+            won12000 = 12000, won14000 = 14000, won6500 = 6500;
 
         // 각 메뉴별 카운트 ( 수량이랑 금액 계산때문에 1로 둠)
         private int popcorn1Count = 1, popcorn2Count = 1, popcorn3Count = 1, popcorn4Count = 1, drink1Count = 1,
@@ -69,7 +69,7 @@ namespace moogabox
             set { drink4Count = value; }
         }
 
-        public int se1tCnt
+        public int set1Cnt
         {
             get { return set1Count; }
             set { set1Count = value; }
@@ -93,6 +93,7 @@ namespace moogabox
             set { set4Count = value; }
         }
 
+        // 메뉴 금액 프로퍼티
         public int popcorn1Price
         {
             get { return popcorn1Cash; }
@@ -165,6 +166,7 @@ namespace moogabox
             set { set4Cash = value; }
         }
 
+        // 메뉴 총 금액 프로퍼티
         public int popcorn1Sum()
         {
             popcorn1Cash = popcorn1Count * won4000;
@@ -173,7 +175,7 @@ namespace moogabox
 
         public int popcorn2Sum()
         {
-            popcorn2Cash = popcorn1Count * won5000;
+            popcorn2Cash = popcorn2Count * won5000;
             return popcorn2Cash;
         }
 
