@@ -63,6 +63,16 @@ namespace moogabox.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220525_141938370 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220525_141938370", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 무가박스_고소___수정본 {
             get {
                 object obj = ResourceManager.GetObject("무가박스 고소 - 수정본", resourceCulture);

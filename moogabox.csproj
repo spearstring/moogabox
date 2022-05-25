@@ -36,6 +36,9 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -50,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form0.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -104,12 +116,6 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManagerForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +148,32 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="StoreOrder.cs" />
+    <Compile Include="UserControls\UC_Drink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Drink.Designer.cs">
+      <DependentUpon>UC_Drink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Popcorn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Popcorn.Designer.cs">
+      <DependentUpon>UC_Popcorn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Set.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Set.Designer.cs">
+      <DependentUpon>UC_Set.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form0.resx">
       <DependentUpon>Form0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -169,9 +196,6 @@
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForm1.resx">
       <DependentUpon>ManagerForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +213,16 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Drink.resx">
+      <DependentUpon>UC_Drink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Popcorn.resx">
+      <DependentUpon>UC_Popcorn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Set.resx">
+      <DependentUpon>UC_Set.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -202,9 +236,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Image\무가박스 고소 - 수정본.png" />
     <Content Include="Image\무가박스 기본스몰콤보 -수정.png" />
@@ -220,6 +252,7 @@
     <Content Include="Image\스몰 어니언팝콘 - 수정.png" />
     <Content Include="Image\스몰치즈팝콘 - 수정.png" />
     <Content Include="Image\팝콘 더블어니언 -수정.png" />
+    <None Include="Resources\KakaoTalk_20220525_141938370.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

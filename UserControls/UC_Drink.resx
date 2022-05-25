@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="무가박스 콜라 -수정본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 콜라 -수정본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 콤보 2 - 수정본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 콤보 2 - 수정본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 스몰더블 -수정본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 스몰더블 -수정본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="스몰 어니언팝콘 - 수정" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\스몰 어니언팝콘 - 수정.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 달콤스몰  -수정본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 달콤스몰  -수정본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 콤보 1 -수정" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 콤보 1 -수정.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 고소 - 수정본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 고소 - 수정본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 팝콘 -수정" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 팝콘 -수정.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 스몰기본 -수정본" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 스몰기본 -수정본.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="무가박스 기본스몰콤보 -수정" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\무가박스 기본스몰콤보 -수정.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KakaoTalk_20220525_141938370" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KakaoTalk_20220525_141938370.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

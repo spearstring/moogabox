@@ -8,33 +8,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using moogabox;
+using moogabox.UserControls;
+using WinFormsApp1;
 
-
-namespace WinFormsApp1
+namespace moogabox
 {
     public partial class Form9 : Form
     {
         StoreOrder ord = new StoreOrder();
-        private string connectionStr = "Server=(local);database=moogabox;" +
+
+        private string connectionStr = "Server=(local);database=Moogabox;" +
                 "Integrated Security=true";
 
-		public Form9()
-		{
-			InitializeComponent();
-		}
-
-        private void Form9_Load(object sender, EventArgs e)
+        public Form9()
         {
-            
+            InitializeComponent();
+
+            UC_Popcorn up = new UC_Popcorn();
+            addUserControl(up);
+
+            up.Button1_Evnet += Popcorn1_Click_Event;
+            up.Button2_Evnet += Popcorn2_Click_Event;
+            up.Button3_Evnet += Popcorn3_Click_Event;
+            up.Button4_Evnet += Popcorn4_Click_Event;
         }
 
-        private void Form9_FormClosed(object sender, FormClosedEventArgs e)
+        private void addUserControl(UserControl userControl)
         {
-            Application.Exit();
+            userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
         }
 
-        private void btnPopcorn1_Click(object sender, EventArgs e)
+        private void tabPopcorn_Click(object sender, EventArgs e)
+        {
+            UC_Popcorn up = new UC_Popcorn();
+            addUserControl(up);
+
+            up.Button1_Evnet += Popcorn1_Click_Event;
+            up.Button2_Evnet += Popcorn2_Click_Event;
+            up.Button3_Evnet += Popcorn3_Click_Event;
+            up.Button4_Evnet += Popcorn4_Click_Event;
+        }
+
+        private void tapDrink_Click(object sender, EventArgs e)
+        {
+            UC_Drink ud = new UC_Drink();
+            addUserControl(ud);
+
+            ud.Button1_Evnet += Drink1_Click_Event;
+            ud.Button2_Evnet += Drink2_Click_Event;
+            ud.Button3_Evnet += Drink3_Click_Event;
+            ud.Button4_Evnet += Drink4_Click_Event;
+        }
+
+        private void tapSet_Click(object sender, EventArgs e)
+        {
+            UC_Set us = new UC_Set();
+            addUserControl(us);
+
+            us.Button1_Evnet += Set1_Click_Event;
+            us.Button2_Evnet += Set2_Click_Event;
+            us.Button3_Evnet += Set3_Click_Event;
+            us.Button4_Evnet += Set4_Click_Event;
+        }
+
+        public void Popcorn1_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -68,7 +108,7 @@ namespace WinFormsApp1
                 else
                 {
                     Comm.Parameters.Add("@SnackNum", SqlDbType.VarChar, 10);
-                    Comm.Parameters["@SnackNum"].Value = this.txtPopcorn1.Text; 
+                    Comm.Parameters["@SnackNum"].Value = this.txtPopcorn1.Text;
 
                     var myRead = Comm.ExecuteReader(CommandBehavior.CloseConnection);
                     while (myRead.Read())
@@ -92,7 +132,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnPopcorn2_Click(object sender, EventArgs e)
+        public void Popcorn2_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -148,7 +188,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnPopcorn3_Click(object sender, EventArgs e)
+        public void Popcorn3_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -204,7 +244,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnPopcorn4_Click(object sender, EventArgs e)
+        public void Popcorn4_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -260,7 +300,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnDrink1_Click(object sender, EventArgs e)
+        public void Drink1_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -316,7 +356,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnDrink2_Click(object sender, EventArgs e)
+        public void Drink2_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -372,7 +412,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnDrink3_Click(object sender, EventArgs e)
+        public void Drink3_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -428,7 +468,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnDrink4_Click(object sender, EventArgs e)
+        public void Drink4_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -484,7 +524,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnSet1_Click(object sender, EventArgs e)
+        public void Set1_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -540,7 +580,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnSet2_Click(object sender, EventArgs e)
+        public void Set2_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -596,7 +636,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnSet3_Click(object sender, EventArgs e)
+        public void Set3_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -651,7 +691,7 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnSet4_Click(object sender, EventArgs e)
+        public void Set4_Click_Event(object sender, EventArgs e)
         {
             var Conn = new SqlConnection(connectionStr);
 
@@ -813,7 +853,7 @@ namespace WinFormsApp1
                         this.Hide();
                     }
                 }
-                
+
                 myRead.Close();
             }
             catch (Exception ex)
@@ -823,7 +863,7 @@ namespace WinFormsApp1
 
                 Conn.Close();
             }
-            
+
         }
 
         // 리스트뷰에 상품 추가 후 결제 버튼을 누르면 임시 매점 구매 테이블에 저장됨
